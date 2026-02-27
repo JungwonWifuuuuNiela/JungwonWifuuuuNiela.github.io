@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 18px;
+      min-height: 50px;
+    }
+
+    button {
+      background-color: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5a67d8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Random Quote Generator</h1>
+    <h2 id="quote">Click the button to see a quote</h2>
+    <button onclick="showQuote()">Show Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+	  "You help my code grow",
+      "Practice makes progress.",
+	  "Never question your worth just because someone else couldn't see it.",
+      "If it makes you happy, It's not waste of time",
+      "May your desire to chase your dreams always be stronger than your fear of trying",
+      "You are not Behind, you are on your own path.",
+      "I know the love I seek exists, because I exist and I am so full of it",
+      "Rest, NotQuit.",
+      "Stay curious."
+    ];
+
+    function showQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
